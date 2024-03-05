@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,70 @@
     <script src="script.js"></script>
 
 </head>
-<body>
-    <h1>Hallo Welt!</h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla porro nisi sit ut at non tempore dolor corrupti sint, 
-        quas molestias praesentium tenetur optio in, nam minima asperiores architecto ipsa!</p>
-        <button class="btn btn-secondary">Action!</button>
 
-        das hier is ein<a href="#">Link!</a>
+<body onload="init()">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">QuizApp</span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <img src="/img/question.jpg" class="card-img-top" alt="...">
+            <div class="progress">
+                <div class="progress-bar" id="progressbar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title" id="questionTxt"></h5>
+
+                <div class="card quiz-answer-card mb-2" onclick="getAnswer('1')">
+                    <div class="card-body" id="option_1">
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="getAnswer('2')">
+                    <div class="card-body" id="option_2">
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="getAnswer('3')">
+                    <div class="card-body" id="option_3">
+                    </div>
+                </div>
+
+                <div class="card quiz-answer-card mb-2" onclick="getAnswer('4')">
+                    <div class="card-body" id="option_4">
+                    </div>
+                </div>
+                <div class="question-footer">
+                    <div><b id="questionNumber"></b> von <b id="allQuestions"></b> Fragen</div>
+                    <button id="btnNext" class="btn btn-primary" onclick="nextQuestion()" disabled>Nächste
+                        Fragen</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="dialog" class="dialogo-bg">
+        <div class="dialog">
+            <h3 id="titleDialog"></h3>
+            <div class="dialog-container">
+                <span id="dialog-container"></span>
+                <p>Quiz beendet.<br> Du hast <b id="info"></b> Fragen von <b id="total"></b> <b>richtig</b> beantwortet.
+                </p>
+            </div>
+            <span> <button class="btnDialog" onclick="againPlay()">Noch mal Spielen</button></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
 </body>
+
 </html>

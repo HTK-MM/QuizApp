@@ -1,0 +1,89 @@
+body {
+    background-color: #9f63ee;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    margin-left: 10px;
+    border-top: 1px solid rgb(23, 117, 231);
+}
+
+.btn {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.quiz-answer-card:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.dialogo-bg {
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog {
+    height: auto;
+    width: 500px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+    color: #563a1ff2;
+}
+
+.btnDialog {
+    width: max-content;
+    color: #dfa216;
+    font-weight: bold;
+    border: #9a7d67;
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.btnDialog:hover {
+    background-color: #dfa216;
+    color: whitesmoke;
+    box-shadow: 0 4px 16px rgb(172, 143, 49);
+}
+
+.dialog p {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: large;
+}
+
+.dialog-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imgQuiz {
+    width: 100px;
+    height: 100px;
+}
